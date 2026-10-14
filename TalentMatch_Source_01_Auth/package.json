@@ -1,0 +1,35 @@
+{
+  "name": "talentmatch",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others --names api,web --prefix-colors blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace backend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "test": "npm run test --workspace backend",
+    "db:generate": "npm run db:generate --workspace backend",
+    "db:migrate": "npm run db:migrate --workspace backend",
+    "db:seed": "npm run db:seed --workspace backend",
+    "test:e2e": "npm run test:e2e --workspace backend",
+    "db:validate": "npm run db:validate --workspace backend"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "9.1.2"
+  },
+  "allowScripts": {
+    "@prisma/client@6.4.1": true,
+    "@prisma/engines@6.4.1": true,
+    "prisma@6.4.1": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.24.2": true,
+    "sharp@0.33.5": true
+  }
+}

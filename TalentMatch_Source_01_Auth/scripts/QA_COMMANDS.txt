@@ -1,0 +1,11 @@
+Root of repository:
+  npm install
+  npm run db:generate
+  npm run db:migrate
+  npm run db:seed
+  npm run test
+  npm run build
+  npm run dev:backend
+  npm run dev:frontend
+
+Do not run migrations or reset against existing production data without a backup.

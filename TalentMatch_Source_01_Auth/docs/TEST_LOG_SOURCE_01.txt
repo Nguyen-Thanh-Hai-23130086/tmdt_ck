@@ -1,0 +1,119 @@
+
+> talentmatch-backend@0.1.0 test
+> node --experimental-test-module-mocks --test tests/*.test.js
+
+TAP version 13
+# (node:2532) ExperimentalWarning: Module mocking is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# [account-email] provider failed: Error
+# Subtest: registration email outage preserves pending user, retry, invalid/expired/single-use verification
+ok 1 - registration email outage preserves pending user, retry, invalid/expired/single-use verification
+  ---
+  duration_ms: 1182.152209
+  type: 'test'
+  ...
+# Subtest: login, credential errors, protected me, logout invalidates session
+ok 2 - login, credential errors, protected me, logout invalidates session
+  ---
+  duration_ms: 697.84661
+  type: 'test'
+  ...
+# Subtest: password reset does not enumerate, rejects invalid/replayed, revokes sessions
+ok 3 - password reset does not enumerate, rejects invalid/replayed, revokes sessions
+  ---
+  duration_ms: 1732.278935
+  type: 'test'
+  ...
+# Subtest: Google OAuth PKCE, nonce, code exchange, state one-use, verified session and email collision
+ok 4 - Google OAuth PKCE, nonce, code exchange, state one-use, verified session and email collision
+  ---
+  duration_ms: 13.344976
+  type: 'test'
+  ...
+# Subtest: Facebook OAuth requires mailbox proof; cancellation, absent email handled
+ok 5 - Facebook OAuth requires mailbox proof; cancellation, absent email handled
+  ---
+  duration_ms: 16.209785
+  type: 'test'
+  ...
+# [oauth callback failed] Error
+# Subtest: invalid provider tokens and explicit secure account linking
+ok 6 - invalid provider tokens and explicit secure account linking
+  ---
+  duration_ms: 359.554471
+  type: 'test'
+  ...
+# Subtest: live API smoke: login, role boundary, guest boundary, validation
+ok 7 - live API smoke: login, role boundary, guest boundary, validation # SKIP
+  ---
+  duration_ms: 0.743722
+  type: 'test'
+  ...
+# Subtest: verification and reset emails use correct frontend links
+ok 8 - verification and reset emails use correct frontend links
+  ---
+  duration_ms: 1.022459
+  type: 'test'
+  ...
+# Subtest: Resend adapter checks acknowledgement, idempotency and failure without real API
+ok 9 - Resend adapter checks acknowledgement, idempotency and failure without real API
+  ---
+  duration_ms: 20.412984
+  type: 'test'
+  ...
+# Subtest: matching scores exact overlapping skills with explanations
+ok 10 - matching scores exact overlapping skills with explanations
+  ---
+  duration_ms: 2.261942
+  type: 'test'
+  ...
+# Subtest: matching never exceeds 100 points with duplicated candidate skills
+ok 11 - matching never exceeds 100 points with duplicated candidate skills
+  ---
+  duration_ms: 0.226461
+  type: 'test'
+  ...
+# Subtest: matching is deterministic for disjoint skill sets
+ok 12 - matching is deterministic for disjoint skill sets
+  ---
+  duration_ms: 0.286803
+  type: 'test'
+  ...
+# Subtest: only freelancer may submit a milestone
+ok 13 - only freelancer may submit a milestone
+  ---
+  duration_ms: 0.915962
+  type: 'test'
+  ...
+# Subtest: only client may approve a submission
+ok 14 - only client may approve a submission
+  ---
+  duration_ms: 0.147444
+  type: 'test'
+  ...
+# Subtest: cannot apply to a closed job or own job
+ok 15 - cannot apply to a closed job or own job
+  ---
+  duration_ms: 0.155839
+  type: 'test'
+  ...
+# Subtest: reviews only allowed after completion
+ok 16 - reviews only allowed after completion
+  ---
+  duration_ms: 0.940437
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 4308.371558
+
+Frontend syntax parse: PASS (17 JS/JSX files).
+Backend syntax: PASS (auth/oauth/email modules).
+Full Vite production build: NOT VERIFIED (Windows-only dependencies in uploaded ZIP; network unavailable for Linux npm ci).
+Live DB/OAuth/SMTP: NOT VERIFIED.

@@ -1,0 +1,53 @@
+NOTICE — HISTORICAL REPORT FROM THE UPLOADED INPUT PROJECT.
+This document describes tests of the earlier source version, NOT the results of
+TalentMatch_Source_01_Auth. For this delivery use:
+  docs/TEST_REPORT_SOURCE_01.md
+  docs/TEST_LOG_SOURCE_01.txt
+
+--- INPUT VERSION HISTORICAL REPORT BELOW ---
+
+TALENTMATCH — UPGRADE QA REPORT
+Date: 2026-10-14
+Input: user-provided TalentMatch_Source_MVP(1).zip, extracted to isolated working directory.
+The uploaded original ZIP was preserved; no existing user database was reset or deleted.
+
+DELIVERED SOURCE
+- Retained React/Vite/Express/PostgreSQL/Prisma architecture and visual identity.
+- Windows one-terminal script with concurrently (package.json), Docker Compose PostgreSQL + Mailpit.
+- Versioned additive migrations: EmailToken+verified date; Invitations+Complaints; OAuth linking ID; Review hidden flag.
+- SMTP email verify/resend; forgot/reset password and session revocation; Mailpit local instructions.
+- Safe authenticated Google/Facebook account linking code; needs credentials and live validation.
+- Avatar/portfolio JPEG/PNG/WebP uploads; company logos; SVG demo assets; browser UI for these.
+- 100 demo accounts designed in seed: 2 ADMIN, 23 CLIENT, 75 FREELANCER; job/application/workspace/payment/review/message/notification data. Does not reset DB.
+- Client/Freelancer invitation, job edit/close, application withdraw/reject, rule-based matching, workspace complaints, Admin complaint review and moderation of jobs/reviews, Admin payment listing.
+- Expanded documentation and scripts for verification, migration, Mailpit, OAuth and E2E local testing.
+
+EXECUTED VERIFICATION
+- Node.js v22.16.0 available.
+- 7/7 unit tests passed, 1 integration test skipped (requires live API/DB).
+- node --check accepted backend JS and seed.
+- TypeScript parser checked 40 JS/JSX source files; 0 parse errors.
+- Local relative imports validated across source files; 0 missing imports.
+- Prisma schema contains 19 model declarations; SQL migrations create 19 matching tables.
+- docker-compose.yml parsed successfully as YAML.
+
+NOT EXECUTED / ENVIRONMENT BLOCKED
+- npm install: npm registry access failed with EAI_AGAIN (DNS resolution failure).
+- No PostgreSQL server or Docker executable in this container. Prisma generate/validate/migrate/seed, Mailpit live test, API integration, frontend build, browser visual/functional E2E not executed.
+- Google/Meta OAuth not verified without genuine credentials.
+- Source is NOT certified as fully working production or E2E in current environment. Recheck on Windows after npm install and start DB.
+- package-lock.json was not possible to generate without npm dependencies; npm install will generate it on the target machine. Commit after successful install.
+
+RECOMMENDED LOCAL ACCEPTANCE
+1. docker compose up -d db mailpit
+2. Copy-Item backend/.env.example backend/.env
+3. npm install
+4. npm run db:validate && npm run db:generate && npm run db:migrate && npm run db:seed
+5. npm run db:seed (verify idempotence)
+6. npm test && npm run build
+7. npm run dev
+8. Test new email verification and reset using http://localhost:8025.
+9. Execute npm run test:e2e on a test/development DB with the server running.
+10. Test upload, OAuth (after credentials), browser responsive and role access.
+
+IMPORTANT LIMITATIONS: docs/KNOWN_LIMITATIONS.md and docs/TESTING.md.

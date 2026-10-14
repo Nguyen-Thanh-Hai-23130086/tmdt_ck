@@ -1,0 +1,1 @@
+ALTER TABLE "JobPost" ADD COLUMN "emailVerifiedAt" TIMESTAMP(3);

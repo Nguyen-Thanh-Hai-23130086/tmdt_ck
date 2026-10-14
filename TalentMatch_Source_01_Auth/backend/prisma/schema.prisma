@@ -1,0 +1,315 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CLIENT
+  FREELANCER
+  ADMIN
+}
+
+enum JobStatus {
+  DRAFT
+  PUBLISHED
+  IN_PROGRESS
+  REVIEW
+  REVISION
+  COMPLETED
+  CANCELLED
+  DISPUTED
+}
+
+enum ApplicationStatus {
+  SUBMITTED
+  REVIEWING
+  SHORTLISTED
+  ACCEPTED
+  REJECTED
+  WITHDRAWN
+}
+
+enum MilestoneStatus {
+  OPEN
+  SUBMITTED
+  REVISION
+  APPROVED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID_DEMO
+}
+
+model User {
+  id                   String             @id @default(cuid())
+  email                String             @unique
+  passwordHash         String?
+  fullName             String
+  role                 Role
+  avatarUrl            String?
+  location             String?
+  bio                  String?            @db.Text
+  locked               Boolean            @default(false)
+  isDemo               Boolean            @default(false)
+  emailVerifiedAt      DateTime?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  invitesSent          Invitation[]       @relation("InvitationClient")
+  invitesReceived      Invitation[]       @relation("InvitationFreelancer")
+  complaintsFiled      Complaint[]
+  emailTokens          EmailToken[]
+  sessions             Session[]
+  oauthAccounts        OAuthAccount[]
+  freelancer           FreelancerProfile?
+  company              Company?
+  jobs                 JobPost[]          @relation("ClientJobs")
+  applications         Application[]
+  clientWorkspaces     Workspace[]        @relation("WorkClient")
+  freelancerWorkspaces Workspace[]        @relation("WorkFreelancer")
+  messages             Message[]
+  notifications        Notification[]
+  reviewsGiven         Review[]            @relation("ReviewAuthor")
+  reviewsReceived      Review[]            @relation("ReviewTarget")
+  auditLogs            AuditLog[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  tokenHash String  @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model OAuthAccount {
+  id             String @id @default(cuid())
+  provider       String
+  providerUserId String
+  userId         String
+  user           User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerUserId])
+}
+
+model OAuthState {
+  stateHash  String @id
+  provider   String
+  role       Role
+  verifier   String?
+  linkUserId String?
+  expiresAt  DateTime
+}
+
+model FreelancerProfile {
+  userId          String          @id
+  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  headline        String          @default("Freelancer")
+  hourlyRate      Int             @default(0)
+  experienceYears Int             @default(0)
+  skills          String[]        @default([])
+  languages       String[]        @default(["Tiếng Việt"])
+  workMode        String          @default("REMOTE")
+  portfolio       PortfolioItem[]
+}
+
+model PortfolioItem {
+  id           String           @id @default(cuid())
+  freelancerId String
+  freelancer   FreelancerProfile @relation(fields: [freelancerId], references: [userId], onDelete: Cascade)
+  title        String
+  description  String           @db.Text
+  imageUrl     String?
+  createdAt    DateTime         @default(now())
+}
+
+model Company {
+  userId      String  @id
+  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name        String
+  industry    String?
+  website     String?
+  logoUrl     String?
+  description String? @db.Text
+}
+
+model JobPost {
+  id              String        @id @default(cuid())
+  clientId        String
+  client          User          @relation("ClientJobs", fields: [clientId], references: [id])
+  title           String
+  description     String        @db.Text
+  budget          Int
+  skills          String[]      @default([])
+  deadline        DateTime?
+  status          JobStatus     @default(PUBLISHED)
+  isDemo          Boolean       @default(false)
+  emailVerifiedAt DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  applications    Application[]
+  invitations     Invitation[]
+  workspace       Workspace?
+
+  @@index([status, createdAt])
+  @@index([clientId, status])
+}
+
+model Application {
+  id           String            @id @default(cuid())
+  jobId        String
+  job          JobPost           @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  freelancerId String
+  freelancer   User              @relation(fields: [freelancerId], references: [id])
+  coverLetter  String            @db.Text
+  bid          Int
+  days         Int
+  status       ApplicationStatus @default(SUBMITTED)
+  createdAt    DateTime          @default(now())
+
+  @@unique([jobId, freelancerId])
+  @@index([freelancerId, status])
+}
+
+model Workspace {
+  id           String        @id @default(cuid())
+  jobId        String        @unique
+  job          JobPost       @relation(fields: [jobId], references: [id])
+  clientId     String
+  client       User          @relation("WorkClient", fields: [clientId], references: [id])
+  freelancerId String
+  freelancer   User          @relation("WorkFreelancer", fields: [freelancerId], references: [id])
+  agreedBudget Int
+  createdAt    DateTime      @default(now())
+  milestones   Milestone[]
+  messages     Message[]
+  transactions Transaction[]
+  reviews      Review[]
+  complaints   Complaint[]
+}
+
+model Milestone {
+  id           String          @id @default(cuid())
+  workspaceId  String
+  workspace    Workspace       @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  title        String
+  description  String?         @db.Text
+  amount       Int
+  dueAt        DateTime?
+  status       MilestoneStatus @default(OPEN)
+  deliverable  String?         @db.Text
+  revisionNote String?         @db.Text
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+}
+
+model Message {
+  id          String    @id @default(cuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  senderId    String
+  sender      User      @relation(fields: [senderId], references: [id])
+  body        String    @db.Text
+  createdAt   DateTime  @default(now())
+
+  @@index([workspaceId, createdAt])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  text      String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model Transaction {
+  id          String        @id @default(cuid())
+  workspaceId String
+  workspace   Workspace     @relation(fields: [workspaceId], references: [id])
+  amount      Int
+  status      PaymentStatus @default(PENDING)
+  reference   String        @unique
+  createdAt   DateTime      @default(now())
+}
+
+model Review {
+  id          String    @id @default(cuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  authorId    String
+  author      User      @relation("ReviewAuthor", fields: [authorId], references: [id])
+  targetId    String
+  target      User      @relation("ReviewTarget", fields: [targetId], references: [id])
+  rating      Int
+  hidden      Boolean   @default(false)
+  comment     String    @db.Text
+  createdAt   DateTime  @default(now())
+
+  @@unique([workspaceId, authorId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String
+  actor     User     @relation(fields: [actorId], references: [id])
+  action    String
+  targetId  String
+  createdAt DateTime @default(now())
+}
+
+// Verification and recovery tokens are stored as SHA-256 hashes, never plaintext.
+model EmailToken {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String   @unique
+  purpose   String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId, purpose])
+}
+
+model Invitation {
+  id           String   @id @default(cuid())
+  jobId        String
+  job          JobPost  @relation(fields: [jobId], references: [id])
+  clientId     String
+  client       User     @relation("InvitationClient", fields: [clientId], references: [id])
+  freelancerId String
+  freelancer   User     @relation("InvitationFreelancer", fields: [freelancerId], references: [id])
+  message      String   @db.Text
+  status       String   @default("PENDING")
+  createdAt    DateTime @default(now())
+
+  @@unique([jobId, freelancerId])
+  @@index([freelancerId, status])
+}
+
+model Complaint {
+  id          String    @id @default(cuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  reporterId  String
+  reporter    User      @relation(fields: [reporterId], references: [id])
+  detail      String    @db.Text
+  status      String    @default("OPEN")
+  response    String?   @db.Text
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([workspaceId, createdAt])
+  @@index([status, createdAt])
+}
