@@ -241,6 +241,21 @@ h1 span {
     flex-shrink: 0;
 }
 
+/*====== CHẾ ĐỘ ĐĂNG NHẬP TẬP TRUNG ====== */
+.main-layout.register-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-layout.register-mode .intro-inner {
+    display: none;
+}
+
+.main-layout.register-mode .login-card {
+    margin: 40px auto;
+}
+
 .login-card {
     width: min(100%, 600px);
     position: relative;
