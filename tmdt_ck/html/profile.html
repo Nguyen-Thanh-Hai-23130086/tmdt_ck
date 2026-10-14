@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentMatch | ThÃ´ng tin tÃ i khoáº£n</title>
+    <link rel="stylesheet" href="../css/talentmatch.css">
+</head>
+<body>
+<header class="topbar">
+    <a href="home.html" class="brand"><span class="brand-symbol"><i></i><i></i><i></i><i></i></span><span><strong>Talent<span>Match</span></strong><small>Káº¾T Ná»I TÃ€I NÄ‚NG - KIáº¾N Táº O TÆ¯Æ NG LAI</small></span></a>
+    <nav><a href="home.html">Trang chá»§</a><a href="jobs.html">TÃ¬m viá»‡c lÃ m</a><a href="candidates.html">TÃ¬m á»©ng viÃªn</a><a href="#">Doanh nghiá»‡p</a><a href="#">Vá» chÃºng tÃ´i</a></nav>
+    <div class="top-actions avatar-area"><button class="search" type="button">âŒ•</button><button class="avatar-button" type="button" id="avatarButton">A</button><div class="avatar-menu" id="avatarMenu"><strong>Nguyá»…n VÄƒn A</strong><span>á»¨ng viÃªn</span><a href="profile.html">ThÃ´ng tin tÃ i khoáº£n</a><a href="../html/login.html">ÄÄƒng xuáº¥t</a></div></div>
+</header>
+<main>
+    <section class="profile-page">
+        <aside class="profile-side"><span class="avatar huge">A</span><h2>Nguyá»…n VÄƒn A</h2><p>Frontend Developer</p><a class="primary-link" href="jobs.html">Xem viá»‡c phÃ¹ há»£p</a></aside>
+        <form class="profile-form" id="profileForm">
+            <h1>ThÃ´ng tin cÃ¡ nhÃ¢n</h1>
+            <div class="form-two"><div><label for="fullName">Há» tÃªn</label><input id="fullName" value="Nguyá»…n VÄƒn A"></div><div><label for="phone">Sá»‘ Ä‘iá»‡n thoáº¡i</label><input id="phone" value="0901234567"></div></div>
+            <label for="email">Email</label><input id="email" value="ungvien@talentmatch.local">
+            <label for="headline">Vá»‹ trÃ­ mong muá»‘n</label><input id="headline" value="Frontend Developer">
+            <label for="skills">Ká»¹ nÄƒng</label><input id="skills" value="React, JavaScript, HTML/CSS, Git">
+            <label for="bio">Giá»›i thiá»‡u</label><textarea id="bio" rows="5">TÃ´i cÃ³ kinh nghiá»‡m xÃ¢y dá»±ng giao diá»‡n web, tá»‘i Æ°u responsive vÃ  lÃ m viá»‡c vá»›i API.</textarea>
+            <button class="primary-button" type="submit">Cáº­p nháº­t thÃ´ng tin</button>
+            <p class="form-message" id="profileMessage"></p>
+        </form>
+    </section>
+</main>
+<script src="../js/talentmatch.js"></script>
+</body>
+</html>
