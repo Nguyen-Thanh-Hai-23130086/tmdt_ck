@@ -1,4 +1,4 @@
-﻿const jobs = [
+const jobs = [
     {
         id: "frontend-dev",
         title: "Frontend Developer React",
@@ -7,15 +7,15 @@
         location: "TP.HCM",
         salary: 22000000,
         skills: ["React", "JavaScript", "HTML/CSS"],
-        posted: "HÃ´m nay",
+        posted: "Hôm nay",
         deadline: "30/11/2026",
         sold: 128,
-        description: "PhÃ¡t triá»ƒn giao diá»‡n web tuyá»ƒn dá»¥ng, tá»‘i Æ°u tráº£i nghiá»‡m ngÆ°á»i dÃ¹ng vÃ  phá»‘i há»£p cÃ¹ng backend Ä‘á»ƒ tÃ­ch há»£p API.",
-        requirements: ["Tá»‘i thiá»ƒu 1 nÄƒm kinh nghiá»‡m React", "Náº¯m vá»¯ng JavaScript ES6+", "Biáº¿t lÃ m responsive UI"],
-        benefits: ["LÆ°Æ¡ng thÃ¡ng 13", "Hybrid 3 ngÃ y/tuáº§n", "Review lÆ°Æ¡ng 2 láº§n/nÄƒm"],
+        description: "Phát triển giao diện web tuyển dụng, tối ưu trải nghiệm người dùng và phối hợp cùng backend để tích hợp API.",
+        requirements: ["Tối thiểu 1 năm kinh nghiệm React", "Nắm vững JavaScript ES6+", "Biết làm responsive UI"],
+        benefits: ["Lương tháng 13", "Hybrid 3 ngày/tuần", "Review lương 2 lần/năm"],
         reviews: [
-            { name: "Minh Anh", rating: 5, content: "CÃ´ng ty pháº£n há»“i á»©ng tuyá»ƒn nhanh, mÃ´ táº£ cÃ´ng viá»‡c rÃµ rÃ ng." },
-            { name: "Quá»‘c Báº£o", rating: 4, content: "Quy trÃ¬nh phá»ng váº¥n gá»n, team ká»¹ thuáº­t thÃ¢n thiá»‡n." }
+            { name: "Minh Anh", rating: 5, content: "Công ty phản hồi ứng tuyển nhanh, mô tả công việc rõ ràng." },
+            { name: "Quốc Bảo", rating: 4, content: "Quy trình phỏng vấn gọn, team kỹ thuật thân thiện." }
         ]
     },
     {
@@ -23,17 +23,17 @@
         title: "Backend Node.js Engineer",
         company: "TalentHub Vietnam",
         type: "Full-time",
-        location: "HÃ  Ná»™i",
+        location: "Hà Nội",
         salary: 28000000,
         skills: ["Node.js", "Express", "PostgreSQL"],
-        posted: "2 ngÃ y trÆ°á»›c",
+        posted: "2 ngày trước",
         deadline: "12/12/2026",
         sold: 96,
-        description: "XÃ¢y dá»±ng API, tá»‘i Æ°u cÆ¡ sá»Ÿ dá»¯ liá»‡u vÃ  phÃ¡t triá»ƒn cÃ¡c module xÃ¡c thá»±c, phÃ¢n quyá»n, thanh toÃ¡n demo.",
-        requirements: ["CÃ³ kinh nghiá»‡m REST API", "Biáº¿t PostgreSQL hoáº·c MySQL", "Æ¯u tiÃªn biáº¿t Prisma"],
-        benefits: ["MacBook lÃ m viá»‡c", "Báº£o hiá»ƒm Ä‘áº§y Ä‘á»§", "ÄÃ o táº¡o ká»¹ thuáº­t háº±ng thÃ¡ng"],
+        description: "Xây dựng API, tối ưu cơ sở dữ liệu và phát triển các module xác thực, phân quyền, thanh toán demo.",
+        requirements: ["Có kinh nghiệm REST API", "Biết PostgreSQL hoặc MySQL", "Ưu tiên biết Prisma"],
+        benefits: ["MacBook làm việc", "Bảo hiểm đầy đủ", "Đào tạo kỹ thuật hằng tháng"],
         reviews: [
-            { name: "Thanh Nam", rating: 5, content: "JD sÃ¡t thá»±c táº¿, má»©c lÆ°Æ¡ng trao Ä‘á»•i minh báº¡ch." }
+            { name: "Thanh Nam", rating: 5, content: "JD sát thực tế, mức lương trao đổi minh bạch." }
         ]
     },
     {
@@ -44,14 +44,14 @@
         location: "Remote",
         salary: 15000000,
         skills: ["Figma", "Design System", "Prototype"],
-        posted: "1 tuáº§n trÆ°á»›c",
+        posted: "1 tuần trước",
         deadline: "05/12/2026",
         sold: 210,
-        description: "Thiáº¿t káº¿ wireframe, prototype vÃ  UI kit cho sáº£n pháº©m web/app trong lÄ©nh vá»±c tuyá»ƒn dá»¥ng.",
-        requirements: ["CÃ³ portfolio", "Biáº¿t xÃ¢y dá»±ng design system", "Hiá»ƒu luá»“ng ngÆ°á»i dÃ¹ng"],
-        benefits: ["LÃ m viá»‡c remote", "Thanh toÃ¡n theo milestone", "CÃ³ cÆ¡ há»™i há»£p tÃ¡c dÃ i háº¡n"],
+        description: "Thiết kế wireframe, prototype và UI kit cho sản phẩm web/app trong lĩnh vực tuyển dụng.",
+        requirements: ["Có portfolio", "Biết xây dựng design system", "Hiểu luồng người dùng"],
+        benefits: ["Làm việc remote", "Thanh toán theo milestone", "Có cơ hội hợp tác dài hạn"],
         reviews: [
-            { name: "HÃ  My", rating: 4, content: "Brief rÃµ rÃ ng, khÃ¡ch hÃ ng pháº£n há»“i lá»‹ch sá»±." }
+            { name: "Hà My", rating: 4, content: "Brief rõ ràng, khách hàng phản hồi lịch sự." }
         ]
     },
     {
@@ -59,17 +59,17 @@
         title: "Data Analyst Intern",
         company: "Market Insight",
         type: "Internship",
-        location: "ÄÃ  Náºµng",
+        location: "Đà Nẵng",
         salary: 6000000,
         skills: ["SQL", "Excel", "Power BI"],
-        posted: "3 ngÃ y trÆ°á»›c",
+        posted: "3 ngày trước",
         deadline: "20/11/2026",
         sold: 64,
-        description: "Há»— trá»£ tá»•ng há»£p dá»¯ liá»‡u, xÃ¢y dá»±ng dashboard vÃ  phÃ¢n tÃ­ch bÃ¡o cÃ¡o tuyá»ƒn dá»¥ng theo tá»«ng chiáº¿n dá»‹ch.",
-        requirements: ["Biáº¿t SQL cÆ¡ báº£n", "ThÃ nh tháº¡o Excel", "TÆ° duy phÃ¢n tÃ­ch tá»‘t"],
-        benefits: ["CÃ³ mentor hÆ°á»›ng dáº«n", "Há»— trá»£ dáº¥u thá»±c táº­p", "CÆ¡ há»™i lÃªn chÃ­nh thá»©c"],
+        description: "Hỗ trợ tổng hợp dữ liệu, xây dựng dashboard và phân tích báo cáo tuyển dụng theo từng chiến dịch.",
+        requirements: ["Biết SQL cơ bản", "Thành thạo Excel", "Tư duy phân tích tốt"],
+        benefits: ["Có mentor hướng dẫn", "Hỗ trợ dấu thực tập", "Cơ hội lên chính thức"],
         reviews: [
-            { name: "Gia Huy", rating: 5, content: "PhÃ¹ há»£p cho sinh viÃªn muá»‘n há»c dá»¯ liá»‡u thá»±c táº¿." }
+            { name: "Gia Huy", rating: 5, content: "Phù hợp cho sinh viên muốn học dữ liệu thực tế." }
         ]
     }
 ];
@@ -77,54 +77,57 @@
 const candidates = [
     {
         id: "nguyen-minh-anh",
-        name: "Nguyá»…n Minh Anh",
+        name: "Nguyễn Minh Anh",
         title: "Frontend Developer",
         location: "TP.HCM",
         experience: 2,
         expectedSalary: 20000000,
         skills: ["React", "JavaScript", "HTML/CSS", "Git"],
-        status: "Äang tÃ¬m viá»‡c",
-        summary: "CÃ³ kinh nghiá»‡m xÃ¢y dá»±ng dashboard, landing page vÃ  há»‡ thá»‘ng quáº£n trá»‹ ná»™i bá»™ báº±ng React.",
-        projects: ["Dashboard tuyá»ƒn dá»¥ng", "Trang há»“ sÆ¡ Freelancer", "UI kit ná»™i bá»™"]
+        status: "Đang tìm việc",
+        summary: "Có kinh nghiệm xây dựng dashboard, landing page và hệ thống quản trị nội bộ bằng React.",
+        projects: ["Dashboard tuyển dụng", "Trang hồ sơ Freelancer", "UI kit nội bộ"]
     },
     {
         id: "tran-quoc-bao",
-        name: "Tráº§n Quá»‘c Báº£o",
+        name: "Trần Quốc Bảo",
         title: "Backend Developer",
-        location: "HÃ  Ná»™i",
+        location: "Hà Nội",
         experience: 3,
         expectedSalary: 26000000,
         skills: ["Node.js", "Express", "PostgreSQL", "Docker"],
-        status: "Sáºµn sÃ ng phá»ng váº¥n",
-        summary: "Táº­p trung vÃ o API, xÃ¡c thá»±c, phÃ¢n quyá»n vÃ  tá»‘i Æ°u truy váº¥n cÆ¡ sá»Ÿ dá»¯ liá»‡u.",
-        projects: ["API quáº£n lÃ½ Ä‘Æ¡n á»©ng tuyá»ƒn", "Há»‡ thá»‘ng thÃ´ng bÃ¡o", "Module thanh toÃ¡n demo"]
+        status: "Sẵn sàng phỏng vấn",
+        summary: "Tập trung vào API, xác thực, phân quyền và tối ưu truy vấn cơ sở dữ liệu.",
+        projects: ["API quản lý đơn ứng tuyển", "Hệ thống thông báo", "Module thanh toán demo"]
     },
     {
         id: "le-ha-my",
-        name: "LÃª HÃ  My",
+        name: "Lê Hà My",
         title: "UI/UX Designer",
         location: "Remote",
         experience: 4,
         expectedSalary: 18000000,
         skills: ["Figma", "Prototype", "Design System", "User Flow"],
-        status: "Nháº­n dá»± Ã¡n freelance",
-        summary: "Thiáº¿t káº¿ sáº£n pháº©m SaaS, marketplace vÃ  ná»n táº£ng tuyá»ƒn dá»¥ng vá»›i há»‡ thá»‘ng component rÃµ rÃ ng.",
-        projects: ["Talent marketplace", "Mobile banking flow", "Design system tuyá»ƒn dá»¥ng"]
+        status: "Nhận dự án freelance",
+        summary: "Thiết kế sản phẩm SaaS, marketplace và nền tảng tuyển dụng với hệ thống component rõ ràng.",
+        projects: ["Talent marketplace", "Mobile banking flow", "Design system tuyển dụng"]
     },
     {
         id: "pham-gia-huy",
-        name: "Pháº¡m Gia Huy",
+        name: "Phạm Gia Huy",
         title: "Data Analyst",
-        location: "ÄÃ  Náºµng",
+        location: "Đà Nẵng",
         experience: 1,
         expectedSalary: 12000000,
         skills: ["SQL", "Excel", "Power BI", "Python"],
-        status: "Äang tÃ¬m viá»‡c",
-        summary: "PhÃ¢n tÃ­ch dá»¯ liá»‡u váº­n hÃ nh, táº¡o dashboard vÃ  bÃ¡o cÃ¡o hiá»‡u suáº¥t chiáº¿n dá»‹ch.",
-        projects: ["Dashboard tuyá»ƒn dá»¥ng", "BÃ¡o cÃ¡o funnel á»©ng viÃªn", "PhÃ¢n tÃ­ch dá»¯ liá»‡u bÃ¡n hÃ ng"]
+        status: "Đang tìm việc",
+        summary: "Phân tích dữ liệu vận hành, tạo dashboard và báo cáo hiệu suất chiến dịch.",
+        projects: ["Dashboard tuyển dụng", "Báo cáo funnel ứng viên", "Phân tích dữ liệu bán hàng"]
     }
 ];
 
+function safe(value) {
+    return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
 function formatCurrency(value) {
     return new Intl.NumberFormat("vi-VN", {
         style: "currency",
@@ -138,7 +141,7 @@ function getParam(name) {
 }
 
 function stars(rating) {
-    return "â˜…".repeat(rating) + "â˜†".repeat(5 - rating);
+    return "★".repeat(rating) + "☆".repeat(5 - rating);
 }
 
 function initAvatarMenu() {
@@ -166,17 +169,17 @@ function injectFooter() {
                 <div class="footer-brand">
                     <a href="home.html" class="brand brand-footer">
                         <span class="brand-symbol"><i></i><i></i><i></i><i></i></span>
-                        <span><strong>Talent<span>Match</span></strong><small>Káº¾T Ná»I TÃ€I NÄ‚NG - KIáº¾N Táº O TÆ¯Æ NG LAI</small></span>
+                        <span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span>
                     </a>
-                    <div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">â–¶</a><a href="#">â—Ž</a></div>
+                    <div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">▶</a><a href="#">◎</a></div>
                 </div>
-                <div class="footer-col"><h3>DÃ nh cho ngÆ°á»i tÃ¬m viá»‡c</h3><a href="jobs.html">TÃ¬m viá»‡c lÃ m</a><a href="profile.html">Táº¡o há»“ sÆ¡</a><a href="#">HÆ°á»›ng dáº«n</a></div>
-                <div class="footer-col"><h3>DÃ nh cho nhÃ  tuyá»ƒn dá»¥ng</h3><a href="#">ÄÄƒng tin tuyá»ƒn dá»¥ng</a><a href="candidates.html">TÃ¬m á»©ng viÃªn</a><a href="#">Báº£ng giÃ¡</a></div>
-                <div class="footer-col"><h3>Vá» TalentMatch</h3><a href="#">Giá»›i thiá»‡u</a><a href="#">ChÃ­nh sÃ¡ch báº£o máº­t</a><a href="#">Äiá»u khoáº£n sá»­ dá»¥ng</a></div>
-                <div class="footer-col"><h3>Há»— trá»£</h3><a href="#">Trung tÃ¢m trá»£ giÃºp</a><a href="#">CÃ¢u há»i thÆ°á»ng gáº·p</a><a href="#">LiÃªn há»‡</a></div>
-                <div class="newsletter"><h3>ÄÄƒng kÃ½ nháº­n tin</h3><form action="#"><input type="email" placeholder="Nháº­p email cá»§a báº¡n"><button type="submit">â†’</button></form><small>Nháº­n tin viá»‡c lÃ m vÃ  cÃ¡c cÆ¡ há»™i má»›i nháº¥t</small></div>
+                <div class="footer-col"><h3>Dành cho người tìm việc</h3><a href="jobs.html">Tìm việc làm</a><a href="profile.html">Tạo hồ sơ</a><a href="#">Hướng dẫn</a></div>
+                <div class="footer-col"><h3>Dành cho nhà tuyển dụng</h3><a href="#">Đăng tin tuyển dụng</a><a href="candidates.html">Tìm ứng viên</a><a href="#">Bảng giá</a></div>
+                <div class="footer-col"><h3>Về TalentMatch</h3><a href="#">Giới thiệu</a><a href="#">Chính sách bảo mật</a><a href="#">Điều khoản sử dụng</a></div>
+                <div class="footer-col"><h3>Hỗ trợ</h3><a href="#">Trung tâm trợ giúp</a><a href="#">Câu hỏi thường gặp</a><a href="#">Liên hệ</a></div>
+                <div class="newsletter"><h3>Đăng ký nhận tin</h3><form action="#"><input type="email" placeholder="Nhập email của bạn"><button type="submit">→</button></form><small>Nhận tin việc làm và các cơ hội mới nhất</small></div>
             </div>
-            <div class="footer-bottom"><span>Â© 2025 TalentMatch. Táº¥t cáº£ quyá»n Ä‘Æ°á»£c báº£o lÆ°u.</span></div>
+            <div class="footer-bottom"><span>© 2025 TalentMatch. Tất cả quyền được bảo lưu.</span></div>
         </footer>
     `);
 }
@@ -194,18 +197,18 @@ function jobCard(job) {
     return `
         <article class="listing-card">
             <div class="listing-top">
-                <span class="company-logo">${job.company.slice(0, 2).toUpperCase()}</span>
+                <span class="company-logo">${safe(job.company.slice(0, 2).toUpperCase())}</span>
                 <div>
-                    <h3>${job.title}</h3>
-                    <p>${job.company} â€¢ ${job.location} â€¢ ${job.type}</p>
+                    <h3>${safe(job.title)}</h3>
+                    <p>${safe(job.company)} • ${safe(job.location)} • ${safe(job.type)}</p>
                 </div>
             </div>
-            <div class="tag-row">${job.skills.map(skill => `<span>${skill}</span>`).join("")}</div>
+            <div class="tag-row">${job.skills.map(skill => `<span>${safe(skill)}</span>`).join("")}</div>
             <div class="listing-meta">
-                <strong>${formatCurrency(job.salary)}</strong>
-                <span>ÄÃ£ xem ${job.sold}</span>
+                <strong>${safe(formatCurrency(job.salary))}</strong>
+                <span>Đã xem ${safe(job.sold)}</span>
             </div>
-            <a class="primary-link" href="job-detail.html?id=${job.id}">Xem chi tiáº¿t</a>
+            <a class="primary-link" href="job-detail.html?id=${encodeURIComponent(job.id)}">Xem chi tiết</a>
         </article>
     `;
 }
@@ -214,18 +217,18 @@ function candidateCard(candidate) {
     return `
         <article class="listing-card">
             <div class="listing-top">
-                <span class="avatar">${candidate.name.split(" ").slice(-1)[0][0]}</span>
+                <span class="avatar">${safe(candidate.name.split(" ").slice(-1)[0][0])}</span>
                 <div>
-                    <h3>${candidate.name}</h3>
-                    <p>${candidate.title} â€¢ ${candidate.location} â€¢ ${candidate.experience} nÄƒm kinh nghiá»‡m</p>
+                    <h3>${safe(candidate.name)}</h3>
+                    <p>${safe(candidate.title)} • ${safe(candidate.location)} • ${safe(candidate.experience)} năm kinh nghiệm</p>
                 </div>
             </div>
-            <div class="tag-row">${candidate.skills.map(skill => `<span>${skill}</span>`).join("")}</div>
+            <div class="tag-row">${candidate.skills.map(skill => `<span>${safe(skill)}</span>`).join("")}</div>
             <div class="listing-meta">
-                <strong>${formatCurrency(candidate.expectedSalary)}</strong>
-                <span>${candidate.status}</span>
+                <strong>${safe(formatCurrency(candidate.expectedSalary))}</strong>
+                <span>${safe(candidate.status)}</span>
             </div>
-            <a class="primary-link" href="candidate-detail.html?id=${candidate.id}">Xem há»“ sÆ¡</a>
+            <a class="primary-link" href="candidate-detail.html?id=${encodeURIComponent(candidate.id)}">Xem hồ sơ</a>
         </article>
     `;
 }
@@ -242,27 +245,31 @@ function initJobsPage() {
     const keyword = document.getElementById("jobKeyword");
     const skill = document.getElementById("jobSkill");
     const location = document.getElementById("jobLocation");
+    const budget = document.getElementById("jobBudget");
     const sort = document.getElementById("jobSort");
     const count = document.getElementById("jobCount");
 
+    const initialQuery = new URLSearchParams(window.location.search).get('q');
+    if (initialQuery && !grid.dataset.tmQueryApplied) {keyword.value=initialQuery.slice(0,160);grid.dataset.tmQueryApplied='1';}
     function render() {
         let data = jobs.filter(job => {
             const matchKeyword = job.title.toLowerCase().includes(keyword.value.trim().toLowerCase()) ||
-                job.company.toLowerCase().includes(keyword.value.trim().toLowerCase());
+                job.company.toLowerCase().includes(keyword.value.trim().toLowerCase()) || job.skills.some(s=>s.toLowerCase().includes(keyword.value.trim().toLowerCase()));
             const matchSkill = skill.value === "all" || job.skills.includes(skill.value);
             const matchLocation = location.value === "all" || job.location === location.value;
-            return matchKeyword && matchSkill && matchLocation;
+            const matchBudget = !budget || budget.value === 'all' || Number(job.salary) <= Number(budget.value);
+            return matchKeyword && matchSkill && matchLocation && matchBudget;
         });
 
         if (sort.value === "salaryDesc") data = data.sort((a, b) => b.salary - a.salary);
         if (sort.value === "salaryAsc") data = data.sort((a, b) => a.salary - b.salary);
         if (sort.value === "viewDesc") data = data.sort((a, b) => b.sold - a.sold);
 
-        count.textContent = `${data.length} viá»‡c lÃ m phÃ¹ há»£p`;
-        grid.innerHTML = data.length ? data.map(jobCard).join("") : '<div class="empty-state">KhÃ´ng tÃ¬m tháº¥y viá»‡c lÃ m phÃ¹ há»£p.</div>';
+        count.textContent = `${data.length} việc làm phù hợp`;
+        grid.innerHTML = data.length ? data.map(jobCard).join("") : '<div class="empty-state">Không tìm thấy việc làm phù hợp.</div>';
     }
 
-    [keyword, skill, location, sort].forEach(control => control.addEventListener("input", render));
+    if (!grid.dataset.tmBound) { [keyword, skill, location, budget, sort].filter(Boolean).forEach(control => control.addEventListener("input", render)); grid.dataset.tmBound = "1"; }
     render();
 }
 
@@ -276,10 +283,12 @@ function initCandidatesPage() {
     const sort = document.getElementById("candidateSort");
     const count = document.getElementById("candidateCount");
 
+    const initialQuery = new URLSearchParams(window.location.search).get('q');
+    if (initialQuery && !grid.dataset.tmQueryApplied) {keyword.value=initialQuery.slice(0,160);grid.dataset.tmQueryApplied='1';}
     function render() {
         let data = candidates.filter(candidate => {
             const matchKeyword = candidate.name.toLowerCase().includes(keyword.value.trim().toLowerCase()) ||
-                candidate.title.toLowerCase().includes(keyword.value.trim().toLowerCase());
+                candidate.title.toLowerCase().includes(keyword.value.trim().toLowerCase()) || candidate.skills.some(s=>s.toLowerCase().includes(keyword.value.trim().toLowerCase()));
             const matchSkill = skill.value === "all" || candidate.skills.includes(skill.value);
             let matchExp = true;
             if (exp.value === "junior") matchExp = candidate.experience <= 1;
@@ -292,11 +301,11 @@ function initCandidatesPage() {
         if (sort.value === "salaryDesc") data = data.sort((a, b) => b.expectedSalary - a.expectedSalary);
         if (sort.value === "expDesc") data = data.sort((a, b) => b.experience - a.experience);
 
-        count.textContent = `${data.length} á»©ng viÃªn phÃ¹ há»£p`;
-        grid.innerHTML = data.length ? data.map(candidateCard).join("") : '<div class="empty-state">KhÃ´ng tÃ¬m tháº¥y á»©ng viÃªn phÃ¹ há»£p.</div>';
+        count.textContent = `${data.length} ứng viên phù hợp`;
+        grid.innerHTML = data.length ? data.map(candidateCard).join("") : '<div class="empty-state">Không tìm thấy ứng viên phù hợp.</div>';
     }
 
-    [keyword, skill, exp, sort].forEach(control => control.addEventListener("input", render));
+    if (!grid.dataset.tmBound) { [keyword, skill, exp, sort].forEach(control => control.addEventListener("input", render)); grid.dataset.tmBound = "1"; }
     render();
 }
 
@@ -304,101 +313,106 @@ function initJobDetailPage() {
     const detail = document.getElementById("jobDetail");
     if (!detail) return;
 
-    const job = jobs.find(item => item.id === getParam("id")) || jobs[0];
+    const job = jobs.find(item => item.id === getParam("id")) ;
+    if (!job) { detail.innerHTML = '<div class="empty-state"><h2>Không tìm thấy công việc</h2><p>Liên kết có thể đã thay đổi.</p><a class="primary-link" href="jobs.html">Trở lại danh sách</a></div>'; return; }
     detail.innerHTML = `
         <div class="detail-head">
-            <span class="company-logo large">${job.company.slice(0, 2).toUpperCase()}</span>
+            <span class="company-logo large">${safe(job.company.slice(0, 2).toUpperCase())}</span>
             <div>
-                <p class="eyebrow-mini">${job.company}</p>
-                <h1>${job.title}</h1>
-                <p>${job.location} â€¢ ${job.type} â€¢ Háº¡n á»©ng tuyá»ƒn ${job.deadline}</p>
+                <p class="eyebrow-mini">${safe(job.company)}</p>
+                <h1>${safe(job.title)}</h1>
+                <p>${safe(job.location)} • ${safe(job.type)} • Hạn ứng tuyển ${safe(job.deadline)}</p>
             </div>
         </div>
-        <div class="tag-row">${job.skills.map(skill => `<span>${skill}</span>`).join("")}</div>
+        <div class="tag-row">${job.skills.map(skill => `<span>${safe(skill)}</span>`).join("")}</div>
         <div class="detail-grid">
             <section>
-                <h2>MÃ´ táº£ cÃ´ng viá»‡c</h2>
-                <p>${job.description}</p>
-                <h2>YÃªu cáº§u</h2>
-                <ul>${job.requirements.map(item => `<li>${item}</li>`).join("")}</ul>
-                <h2>Quyá»n lá»£i</h2>
-                <ul>${job.benefits.map(item => `<li>${item}</li>`).join("")}</ul>
+                <h2>Mô tả công việc</h2>
+                <p>${safe(job.description)}</p>
+                <h2>Yêu cầu</h2>
+                <ul>${job.requirements.map(item => `<li>${safe(item)}</li>`).join("")}</ul>
+                <h2>Quyền lợi</h2>
+                <ul>${job.benefits.map(item => `<li>${safe(item)}</li>`).join("")}</ul>
             </section>
             <aside class="apply-card">
-                <strong>${formatCurrency(job.salary)}</strong>
-                <p>Má»©c lÆ°Æ¡ng dá»± kiáº¿n</p>
-                <button class="primary-button" type="button" id="applyButton">á»¨ng tuyá»ƒn ngay</button>
+                <strong>${safe(formatCurrency(job.salary))}</strong>
+                <p>Mức lương dự kiến</p>
+                <button class="primary-button" type="button" id="applyButton">Ứng tuyển ngay</button>
                 <p class="form-message" id="applyMessage"></p>
             </aside>
         </div>
         <section class="reviews-card embedded">
             <div class="section-heading">
                 <div>
-                    <h2>ÄÃ¡nh giÃ¡ cÃ´ng ty</h2>
-                    <p>Nháº­n xÃ©t tá»« á»©ng viÃªn Ä‘Ã£ tá»«ng trao Ä‘á»•i vá»›i cÃ´ng ty.</p>
+                    <h2>Đánh giá công ty</h2>
+                    <p>Nhận xét từ ứng viên đã từng trao đổi với công ty.</p>
                 </div>
             </div>
             <div class="review-list">
                 ${job.reviews.map(review => `
                     <div class="review-item">
-                        <strong>${review.name}</strong>
+                        <strong>${safe(review.name)}</strong>
                         <div class="stars">${stars(review.rating)}</div>
-                        <p>${review.content}</p>
+                        <p>${safe(review.content)}</p>
                     </div>
                 `).join("")}
             </div>
         </section>
     `;
 
-    document.getElementById("applyButton").addEventListener("click", () => {
-        document.getElementById("applyMessage").textContent = "ÄÃ£ gá»­i há»“ sÆ¡ á»©ng tuyá»ƒn Ä‘áº¿n cÃ´ng ty.";
-    });
+    document.getElementById("applyButton").addEventListener("click", () => { window.location.href = "workspace.html?view=applications&job=" + encodeURIComponent(job.id); });
 }
 
 function initCandidateDetailPage() {
     const detail = document.getElementById("candidateDetail");
     if (!detail) return;
 
-    const candidate = candidates.find(item => item.id === getParam("id")) || candidates[0];
+    const candidate = candidates.find(item => item.id === getParam("id")) ;
+    if (!candidate) { detail.innerHTML = '<div class="empty-state"><h2>Không tìm thấy Freelancer</h2><p>Hồ sơ không tồn tại.</p><a class="primary-link" href="candidates.html">Trở lại danh sách</a></div>'; return; }
     detail.innerHTML = `
         <div class="detail-head">
-            <span class="avatar large">${candidate.name.split(" ").slice(-1)[0][0]}</span>
+            <span class="avatar large">${safe(candidate.name.split(" ").slice(-1)[0][0])}</span>
             <div>
-                <p class="eyebrow-mini">${candidate.status}</p>
-                <h1>${candidate.name}</h1>
-                <p>${candidate.title} â€¢ ${candidate.location} â€¢ ${candidate.experience} nÄƒm kinh nghiá»‡m</p>
+                <p class="eyebrow-mini">${safe(candidate.status)}</p>
+                <h1>${safe(candidate.name)}</h1>
+                <p>${safe(candidate.title)} • ${safe(candidate.location)} • ${safe(candidate.experience)} năm kinh nghiệm</p>
             </div>
         </div>
         <div class="detail-grid">
             <section>
-                <h2>Giá»›i thiá»‡u</h2>
-                <p>${candidate.summary}</p>
-                <h2>Ká»¹ nÄƒng</h2>
-                <div class="tag-row">${candidate.skills.map(skill => `<span>${skill}</span>`).join("")}</div>
-                <h2>Dá»± Ã¡n tiÃªu biá»ƒu</h2>
-                <ul>${candidate.projects.map(item => `<li>${item}</li>`).join("")}</ul>
+                <h2>Giới thiệu</h2>
+                <p>${safe(candidate.summary)}</p>
+                <h2>Kỹ năng</h2>
+                <div class="tag-row">${candidate.skills.map(skill => `<span>${safe(skill)}</span>`).join("")}</div>
+                <h2>Dự án tiêu biểu</h2>
+                <ul>${candidate.projects.map(item => `<li>${safe(item)}</li>`).join("")}</ul>
             </section>
             <aside class="apply-card">
-                <strong>${formatCurrency(candidate.expectedSalary)}</strong>
-                <p>Má»©c lÆ°Æ¡ng mong muá»‘n</p>
-                <button class="primary-button" type="button" id="inviteButton">Má»i á»©ng tuyá»ƒn</button>
+                <strong>${safe(formatCurrency(candidate.expectedSalary))}</strong>
+                <p>Mức lương mong muốn</p>
+                <button class="primary-button" type="button" id="inviteButton">Mời ứng tuyển</button>
                 <p class="form-message" id="inviteMessage"></p>
             </aside>
         </div>
     `;
 
-    document.getElementById("inviteButton").addEventListener("click", () => {
-        document.getElementById("inviteMessage").textContent = "ÄÃ£ gá»­i lá»i má»i á»©ng tuyá»ƒn Ä‘áº¿n á»©ng viÃªn.";
-    });
+    document.getElementById("inviteButton").addEventListener("click", () => { window.location.href = "workspace.html?view=invitations&candidate=" + encodeURIComponent(candidate.id); });
 }
 
 function initProfilePage() {
     const form = document.getElementById("profileForm");
     if (!form) return;
-
-    form.addEventListener("submit", event => {
+    try { const saved=JSON.parse(localStorage.getItem('tm_legacy_profile')||'null');if(saved)Object.entries(saved).forEach(([key,value])=>{const field=form.querySelector('[id="'+key+'"]');if(field)field.value=value;});}catch{}
+    form.addEventListener("submit", async event => {
         event.preventDefault();
-        document.getElementById("profileMessage").textContent = "ÄÃ£ cáº­p nháº­t thÃ´ng tin tÃ i khoáº£n.";
+        const data=Object.fromEntries([...form.querySelectorAll('input,textarea')].map(input=>[input.id,input.value]));
+        const message=document.getElementById("profileMessage");
+        try {
+            const logged=await fetch('../api/auth/me',{credentials:'same-origin'});
+            if(logged.ok){const body=new URLSearchParams({name:data.fullName,headline:data.headline,skills:data.skills,bio:data.bio,portfolio:''});const result=await fetch('../api/profile',{method:'POST',credentials:'same-origin',headers:{'X-TM-Request':'1','Content-Type':'application/x-www-form-urlencoded'},body});if(!result.ok)throw Error('MySQL chưa thể cập nhật hồ sơ');message.textContent='Đã lưu hồ sơ trong MySQL.';return;}
+        } catch(error){if(!error.message.includes('Failed to fetch')&&!error.message.includes('NetworkError')){message.textContent=error.message;return;}}
+        localStorage.setItem('tm_legacy_profile',JSON.stringify(data));
+        message.textContent='Đã lưu hồ sơ vào trình duyệt (chế độ demo, không phải MySQL).';
     });
 }
 

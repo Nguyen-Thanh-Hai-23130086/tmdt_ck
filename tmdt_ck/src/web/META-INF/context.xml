@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- Tomcat 10.1+; HTTP-only session cookie remains managed by Tomcat. -->
+    <CookieProcessor sameSiteCookies="lax"/>
+</Context>

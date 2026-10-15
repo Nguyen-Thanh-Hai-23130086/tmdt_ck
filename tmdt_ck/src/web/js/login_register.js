@@ -1,21 +1,22 @@
-//====== LẤY PHẦN TỬ ======
-const mainLayout = document.querySelector(".main-layout");
-const signupButton = document.getElementById("signupButton");
-const loginButton = document.querySelector(".login-top");
-const registerLink = document.getElementById("registerLink");
-
-//====== CHUYỂN GIAO DIỆN ======
-function showRegisterMode(event) {
-    event.preventDefault();
-    mainLayout.classList.add("register-mode");
-}
-
-function showLoginMode(event) {
-    event.preventDefault();
-    mainLayout.classList.remove("register-mode");
-}
-
-//====== GẮN SỰ KIỆN ======
-signupButton.addEventListener("click", showRegisterMode);
-registerLink.addEventListener("click", showRegisterMode);
-loginButton.addEventListener("click", showLoginMode);
+(() => {
+ const card=document.querySelector('.login-card'), layout=document.querySelector('.main-layout');
+ const message=document.getElementById('authMessage'); let selectedRole='FREELANCER';
+ const forms={login:document.getElementById('loginForm'),register:document.getElementById('registerForm'),forgot:document.getElementById('forgotForm'),reset:document.getElementById('resetForm'),verify:document.getElementById('verifyForm')};
+ const setMode=(mode)=>{Object.entries(forms).forEach(([name,form])=>form.hidden=name!==mode);card.querySelector('.divider').hidden=mode!=='login';card.querySelector('.socials').hidden=mode!=='login';card.querySelector('.register').hidden=mode!=='login';card.querySelector('.account-tabs').hidden=mode!=='login';document.getElementById('authBack').hidden=mode==='login';card.querySelector('h2').textContent={login:'Đăng nhập',register:'Đăng ký',forgot:'Quên mật khẩu',reset:'Đặt lại mật khẩu',verify:'Xác minh email'}[mode];layout.classList.toggle('register-mode',mode!=='login');message.textContent='';};
+ document.getElementById('signupButton')?.addEventListener('click',e=>{e.preventDefault();setMode('register')});
+ document.getElementById('registerLink')?.addEventListener('click',e=>{e.preventDefault();setMode('register')});
+ document.querySelector('.login-top')?.addEventListener('click',e=>{e.preventDefault();setMode('login')});
+ document.getElementById('authBack').addEventListener('click',()=>setMode('login'));
+ document.getElementById('verifyLink').addEventListener('click',e=>{e.preventDefault();setMode('verify');});
+ document.getElementById('forgotLink')?.addEventListener('click',e=>{e.preventDefault();setMode('forgot')});
+ document.querySelectorAll('[data-role]').forEach(btn=>btn.addEventListener('click',()=>{selectedRole=btn.dataset.role;document.querySelectorAll('[data-role]').forEach(b=>b.classList.toggle('selected',b===btn));}));
+ document.querySelector('.toggle-password')?.addEventListener('click',()=>{const p=document.getElementById('password');p.type=p.type==='password'?'text':'password';});
+ document.querySelectorAll('[data-external]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();message.textContent=`Đăng nhập ${link.dataset.external} cần cấu hình ứng dụng và callback từ nhà cung cấp; chưa hoạt động.`;}));
+ async function post(path,body){const r=await fetch('../api/auth/'+path,{method:'POST',credentials:'same-origin',headers:{'X-TM-Request':'1','Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams(body)});let data;try{data=await r.json()}catch{throw Error('Máy chủ chưa sẵn sàng. Kiểm tra Tomcat và MySQL.')}if(!r.ok)throw Error(data.error||'Yêu cầu thất bại');return data;}
+ forms.login.addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(forms.login);message.textContent='Đang đăng nhập...';try{const result=await post('login',{email:f.get('email'),password:f.get('password')});sessionStorage.setItem('tm_user',JSON.stringify(result.user));location.href='workspace.html';}catch(err){message.textContent=err.message;}});
+ forms.register.addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(forms.register);if(f.get('password')!==f.get('confirm')){message.textContent='Hai mật khẩu không khớp';return}message.textContent='Đang tạo tài khoản...';try{await post('register',{name:f.get('name'),email:f.get('email'),password:f.get('password'),role:selectedRole});setMode('login');message.textContent='Đã tạo tài khoản trên MySQL. Xác minh email thật chưa được kích hoạt trong bản demo; bạn có thể đăng nhập.';}catch(err){message.textContent=err.message;}});
+ forms.forgot.addEventListener('submit',e=>{e.preventDefault();message.textContent='Chưa có dịch vụ gửi email. Vui lòng liên hệ quản trị viên; không có email nào được gửi.'});
+ forms.verify.addEventListener('submit',e=>{e.preventDefault();message.textContent='Chưa kết nối dịch vụ gửi email và xác thực token. Không thể xác minh mã trong phiên bản hiện tại.'});
+ forms.reset.addEventListener('submit',e=>{e.preventDefault();message.textContent='Đặt lại mật khẩu bằng token chưa được kích hoạt. Không có mật khẩu nào thay đổi.'});
+ if(new URLSearchParams(location.search).has('register'))setMode('register');else if(new URLSearchParams(location.search).has('verify'))setMode('verify');else if(new URLSearchParams(location.search).has('reset'))setMode('reset');
+})();

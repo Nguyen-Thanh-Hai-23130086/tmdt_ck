@@ -1,32 +1,34 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TalentMatch | TÃ¬m á»©ng viÃªn</title>
+    <title>TalentMatch | Tìm ứng viên</title>
     <link rel="stylesheet" href="../css/talentmatch.css">
 </head>
 <body>
 <header class="topbar">
-    <a href="home.html" class="brand"><span class="brand-symbol"><i></i><i></i><i></i><i></i></span><span><strong>Talent<span>Match</span></strong><small>Káº¾T Ná»I TÃ€I NÄ‚NG - KIáº¾N Táº O TÆ¯Æ NG LAI</small></span></a>
-    <nav><a href="home.html">Trang chá»§</a><a href="jobs.html">TÃ¬m viá»‡c lÃ m</a><a href="candidates.html">TÃ¬m á»©ng viÃªn</a><a href="#">Doanh nghiá»‡p</a><a href="#">Vá» chÃºng tÃ´i</a></nav>
-    <div class="top-actions avatar-area"><button class="search" type="button">âŒ•</button><button class="avatar-button" type="button" id="avatarButton">A</button><div class="avatar-menu" id="avatarMenu"><strong>CÃ´ng ty NovaTech</strong><span>NhÃ  tuyá»ƒn dá»¥ng</span><a href="profile.html">ThÃ´ng tin tÃ i khoáº£n</a><a href="../html/login.html">ÄÄƒng xuáº¥t</a></div></div>
+    <a href="home.html" class="brand"><span class="brand-symbol"><i></i><i></i><i></i><i></i></span><span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span></a>
+    <nav><a href="home.html">Trang chủ</a><a href="jobs.html">Tìm việc làm</a><a href="candidates.html">Tìm ứng viên</a><a href="workspace.html?role=CLIENT&view=dashboard">Doanh nghiệp</a><a href="about.html">Về chúng tôi</a></nav>
+    <div class="top-actions avatar-area"><button class="search" type="button">⌕</button><button class="avatar-button" type="button" id="avatarButton" aria-haspopup="true" aria-expanded="false" aria-controls="avatarMenu" aria-label="Mở menu tài khoản">TM</button><div class="avatar-menu" id="avatarMenu"><strong>Đang kiểm tra tài khoản</strong><span>Tài khoản</span><a href="workspace.html?view=profile">Thông tin tài khoản</a><a href="login_register.html" data-logout>Đăng xuất</a></div></div>
 </header>
 <main>
     <section class="list-page-head">
-        <div><div class="eyebrow"><span>ÏŸ</span> á»¨ng viÃªn Ä‘ang tÃ¬m viá»‡c</div><h1>TÃ¬m á»©ng viÃªn phÃ¹ há»£p vá»‹ trÃ­ tuyá»ƒn dá»¥ng.</h1><p>Doanh nghiá»‡p lá»c á»©ng viÃªn theo ká»¹ nÄƒng, kinh nghiá»‡m vÃ  má»©c lÆ°Æ¡ng mong muá»‘n, sau Ä‘Ã³ xem há»“ sÆ¡ chi tiáº¿t.</p></div>
+        <div><div class="eyebrow"><span>ϟ</span> Ứng viên đang tìm việc</div><h1>Tìm ứng viên phù hợp vị trí tuyển dụng.</h1><p>Doanh nghiệp lọc ứng viên theo kỹ năng, kinh nghiệm và mức lương mong muốn, sau đó xem hồ sơ chi tiết.</p></div>
     </section>
     <section class="commerce-shell">
         <aside class="filter-card">
-            <h2>Lá»c á»©ng viÃªn</h2>
-            <label for="candidateKeyword">Tá»« khÃ³a</label><input id="candidateKeyword" type="search" placeholder="TÃªn hoáº·c vá»‹ trÃ­">
-            <label for="candidateSkill">Ká»¹ nÄƒng</label><select id="candidateSkill"><option value="all">Táº¥t cáº£ ká»¹ nÄƒng</option><option>React</option><option>Node.js</option><option>Figma</option><option>SQL</option><option>Power BI</option></select>
-            <label for="candidateExp">Kinh nghiá»‡m</label><select id="candidateExp"><option value="all">Táº¥t cáº£ kinh nghiá»‡m</option><option value="junior">0-1 nÄƒm</option><option value="middle">2-3 nÄƒm</option><option value="senior">Tá»« 4 nÄƒm</option></select>
-            <label for="candidateSort">Sáº¯p xáº¿p</label><select id="candidateSort"><option value="default">PhÃ¹ há»£p nháº¥t</option><option value="expDesc">Kinh nghiá»‡m cao nháº¥t</option><option value="salaryAsc">LÆ°Æ¡ng mong muá»‘n tÄƒng dáº§n</option><option value="salaryDesc">LÆ°Æ¡ng mong muá»‘n giáº£m dáº§n</option></select>
+            <h2>Lọc ứng viên</h2>
+            <label for="candidateKeyword">Từ khóa</label><input id="candidateKeyword" type="search" placeholder="Tên hoặc vị trí">
+            <label for="candidateSkill">Kỹ năng</label><select id="candidateSkill"><option value="all">Tất cả kỹ năng</option><option>React</option><option>Node.js</option><option>Figma</option><option>SQL</option><option>Power BI</option></select>
+            <label for="candidateExp">Kinh nghiệm</label><select id="candidateExp"><option value="all">Tất cả kinh nghiệm</option><option value="junior">0-1 năm</option><option value="middle">2-3 năm</option><option value="senior">Từ 4 năm</option></select>
+            <label for="candidateSort">Sắp xếp</label><select id="candidateSort"><option value="default">Phù hợp nhất</option><option value="expDesc">Kinh nghiệm cao nhất</option><option value="salaryAsc">Lương mong muốn tăng dần</option><option value="salaryDesc">Lương mong muốn giảm dần</option></select>
         </aside>
-        <section class="list-section"><div class="section-heading"><div><h2>Danh sÃ¡ch á»©ng viÃªn</h2><p id="candidateCount">0 á»©ng viÃªn phÃ¹ há»£p</p></div></div><div class="listing-grid two" id="candidatesGrid"></div></section>
+        <section class="list-section"><div class="section-heading"><div><h2>Danh sách ứng viên</h2><p id="candidateCount">0 ứng viên phù hợp</p></div></div><div class="listing-grid two" id="candidatesGrid"></div></section>
     </section>
 </main>
 <script src="../js/talentmatch.js"></script>
+<script src="../js/public-data.js"></script>
+<script src="../js/site.js"></script>
 </body>
 </html>

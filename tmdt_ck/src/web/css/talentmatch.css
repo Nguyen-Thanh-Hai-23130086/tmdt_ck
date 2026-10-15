@@ -1143,3 +1143,17 @@ a.primary-button {
         grid-template-columns: 1fr;
     }
 }
+
+/* Guest login shortcut reuses the brand's color; no fake signed-in identity. */
+.tm-login-shortcut{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border:1px solid #ded8fa;border-radius:9px;color:#6538ed;background:#f9f7ff;font-weight:700;white-space:nowrap}
+.tm-login-shortcut:hover{background:#eeeaff}
+
+/* Compact, contextual data-source indication; not a public header banner. */
+.tm-data-source{display:inline-block;font-size:10px;line-height:1.5;color:#8275a6;background:#f4f1ff;padding:3px 8px;border-radius:16px;margin-top:7px}
+.tm-menu-error{color:#9a2636;font-size:11px;line-height:1.5;margin:10px 0 0}
+
+/* Consistent sticky public header to match the role workspaces. */
+.topbar {position:sticky;top:0;z-index:110;min-height:80px;box-sizing:border-box;border-bottom:1px solid #e9edf8;box-shadow:0 3px 16px #14214b08}
+.topbar .avatar-menu {z-index:210;max-width:calc(100vw - 16px);max-height:calc(100dvh - 92px);overflow:auto}
+@media(max-width:830px){.topbar{height:72px;min-height:72px}}
+@media(max-width:540px){.topbar{padding-inline:14px}}

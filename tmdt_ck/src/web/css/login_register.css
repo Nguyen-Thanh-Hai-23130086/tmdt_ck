@@ -805,3 +805,13 @@ h1 span {
         font-size: 11px;
     }
 }
+
+/* Additions scoped to auth modes; existing login visual tokens unchanged. */
+.auth-extra[hidden],#loginForm[hidden],.divider[hidden],.socials[hidden],.register[hidden] {display:none!important}
+.auth-extra {margin-top:20px;display:grid;gap:12px}
+.auth-extra label {display:grid;gap:7px;font-weight:600}
+.auth-extra input {width:100%;height:46px;border:1px solid var(--line);border-radius:9px;padding:12px;background:white}
+.auth-extra input:focus-visible {outline:2px solid var(--purple)}
+.auth-back {background:none;border:none;color:var(--purple);padding:12px;cursor:pointer}
+.form-message {line-height:1.5;color:#5643b2;min-height:20px;margin:12px 0}
+@media(max-width:768px){.auth-extra{width:100%}}

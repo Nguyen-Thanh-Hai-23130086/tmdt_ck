@@ -8,12 +8,12 @@
 </head>
 <body>
 <header class="topbar">
-    <a href="#" class="brand" aria-label="TalentMatch">
+    <a href="home.html" class="brand" aria-label="TalentMatch">
         <span class="brand-symbol"><i></i><i></i><i></i><i></i></span>
         <span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span>
     </a>
     <nav>
-        <a href="#">Trang chủ</a><a href="#">Tìm việc làm</a><a href="#">Tìm ứng viên</a><a href="#">Doanh nghiệp</a><a
+        <a href="home.html">Trang chủ</a><a href="jobs.html">Tìm việc làm</a><a href="candidates.html">Tìm ứng viên</a><a href="workspace.html?role=CLIENT&view=dashboard">Doanh nghiệp</a><a
             href="#">Về chúng tôi</a>
     </nav>
     <div class="top-actions">
@@ -44,14 +44,14 @@
         <p class="welcome">Chào mừng bạn trở lại TalentMatch!</p>
 
         <div class="account-tabs">
-            <button type="button" class="selected"><span>♟</span> Ứng viên</button>
-            <button type="button"><span>▤</span> Nhà tuyển dụng</button>
+            <button type="button" class="selected" data-role="FREELANCER"><span>♟</span> Ứng viên</button>
+            <button type="button" data-role="CLIENT"><span>▤</span> Nhà tuyển dụng</button>
         </div>
 
-        <form action="/talentmatch/login" method="post">
-            <label for="email">Email hoặc số điện thoại <b>*</b></label>
+        <form id="loginForm" action="../api/auth/login" method="post">
+            <label for="email">Email <b>*</b></label>
             <div class="input-box"><span>✉</span><input id="email" name="email" type="text"
-                                                        placeholder="Nhập email hoặc số điện thoại"
+                                                        placeholder="Nhập email của bạn"
                                                         autocomplete="username" required></div>
 
             <label for="password">Mật khẩu <b>*</b></label>
@@ -62,34 +62,59 @@
             </div>
 
             <div class="form-meta"><label class="remember"><input type="checkbox" name="remember" checked><span>Ghi nhớ đăng nhập</span></label><a
-                    href="#">Quên mật khẩu?</a></div>
+                    href="#" id="forgotLink">Quên mật khẩu?</a></div>
             <button class="submit" type="submit">Đăng nhập <span>→</span></button>
         </form>
 
         <div class="divider"><span>Hoặc đăng nhập bằng</span></div>
         <div class="socials">
-            <a href="#"><b class="google">G</b> Google</a>
-            <a href="#"><b class="facebook">f</b> Facebook</a>
-            <a href="#"><b class="apple">●</b> Apple</a>
+            <a href="#" data-external="Google"><b class="google">G</b> Google</a>
+            <a href="#" data-external="Facebook"><b class="facebook">f</b> Facebook</a>
+            <a href="#" data-external="Apple"><b class="apple">●</b> Apple</a>
         </div>
         <p class="register">Chưa có tài khoản? <a href="#" id="registerLink">Đăng ký ngay</a></p>
+        <p id="authMessage" class="form-message" role="status" aria-live="polite"></p>
+        <form id="registerForm" class="auth-extra" hidden>
+          <label>Họ và tên *<input name="name" maxlength="100" required autocomplete="name"></label>
+          <label>Email *<input name="email" type="email" required autocomplete="email"></label>
+          <label>Mật khẩu (10 ký tự, chữ hoa, chữ thường và số) *<input name="password" type="password" minlength="10" required autocomplete="new-password"></label>
+          <label>Nhập lại mật khẩu *<input name="confirm" type="password" minlength="10" required></label>
+          <button class="submit" type="submit">Tạo tài khoản →</button>
+        </form>
+        <form id="forgotForm" class="auth-extra" hidden>
+          <label>Email tài khoản<input name="email" type="email" required></label>
+          <p class="muted">Gửi yêu cầu hỗ trợ đặt lại mật khẩu. Tính năng gửi email thật chưa cấu hình.</p>
+          <button class="submit" type="submit">Gửi yêu cầu →</button>
+        </form>
+        <form id="verifyForm" class="auth-extra" hidden>
+          <p class="muted">Xác minh email bằng mã hoặc liên kết sẽ được kích hoạt khi có dịch vụ email và token trên Backend.</p>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Mã xác minh<input name="code" maxlength="12" required></label>
+          <button class="submit" type="submit">Kiểm tra mã xác minh</button>
+        </form>
+        <form id="resetForm" class="auth-extra" hidden>
+          <label>Token đặt lại mật khẩu<input name="token" required></label>
+          <label>Mật khẩu mới<input name="password" type="password" minlength="10" required></label>
+          <button class="submit" type="submit">Cập nhật mật khẩu →</button>
+        </form>
+        <a href="#" class="auth-back" id="verifyLink">Xác minh email (đang chờ tích hợp)</a>
+        <button type="button" class="auth-back" id="authBack" hidden>← Quay lại đăng nhập</button>
     </div>
 </main>
 
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-brand">
-            <a href="#" class="brand brand-footer"><span
+            <a href="home.html" class="brand brand-footer"><span
                     class="brand-symbol"><i></i><i></i><i></i><i></i></span><span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span></a>
-            <div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">▶</a><a href="#">◎</a></div>
+            <div class="footer-social"><span title="Chờ tích hợp">f</span><span title="Chờ tích hợp">in</span><span title="Chờ tích hợp">▶</span><span title="Chờ tích hợp">◎</span></div>
         </div>
-        <div class="footer-col"><h3>Dành cho người tìm việc</h3><a href="#">Tìm việc làm</a><a href="#">Tạo hồ sơ</a><a
+        <div class="footer-col"><h3>Dành cho người tìm việc</h3><a href="jobs.html">Tìm việc làm</a><a href="workspace.html?view=profile">Tạo hồ sơ</a><a
                 href="#">Hướng dẫn</a></div>
-        <div class="footer-col"><h3>Dành cho nhà tuyển dụng</h3><a href="#">Đăng tin tuyển dụng</a><a href="#">Tìm ứng
-            viên</a><a href="#">Bảng giá</a></div>
-        <div class="footer-col"><h3>Về TalentMatch</h3><a href="#">Giới thiệu</a><a href="#">Chính sách bảo mật</a><a
+        <div class="footer-col"><h3>Dành cho nhà tuyển dụng</h3><a href="workspace.html?role=CLIENT&view=jobs">Đăng tin tuyển dụng</a><a href="candidates.html">Tìm ứng viên</a><a href="workspace.html?view=premium">Bảng giá</a></div>
+        <div class="footer-col"><h3>Về TalentMatch</h3><a href="about.html">Giới thiệu</a><a href="about.html#privacy">Chính sách bảo mật</a><a
                 href="#">Điều khoản sử dụng</a></div>
-        <div class="footer-col"><h3>Hỗ trợ</h3><a href="#">Trung tâm trợ giúp</a><a href="#">Câu hỏi thường gặp</a><a
+        <div class="footer-col"><h3>Hỗ trợ</h3><a href="about.html#support">Trung tâm trợ giúp</a><a href="about.html#support">Câu hỏi thường gặp</a><a
                 href="#">Liên hệ</a></div>
         <div class="newsletter"><h3>Đăng ký nhận tin</h3>
             <form action="#"><input type="email" placeholder="Nhập email của bạn">
@@ -98,9 +123,10 @@
             <small>Nhận tin việc làm và các cơ hội mới nhất</small></div>
     </div>
     <div class="footer-bottom"><span>© 2025 TalentMatch. Tất cả quyền được bảo lưu.</span>
-        <div><a href="#">f</a><a href="#">in</a><a href="#">▶</a><a href="#">◎</a><a href="#">◎</a></div>
+        <div><span title="Chờ tích hợp">f</span><span title="Chờ tích hợp">in</span><span title="Chờ tích hợp">▶</span><span title="Chờ tích hợp">◎</span><span title="Chờ tích hợp">◎</span></div>
     </div>
 </footer>
 </body>
 <script src="../js/login_register.js"></script>
+<script src="../js/site.js"></script>
 </html>
