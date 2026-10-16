@@ -34,11 +34,11 @@
     <build>
         <finalName>talentmatch</finalName>
 
-        <sourceDirectory>src/java</sourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
 
         <resources>
             <resource>
-                <directory>src/resources</directory>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
 
@@ -54,7 +54,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
                 <configuration>
-                    <warSourceDirectory>src/web</warSourceDirectory>
+                    <warSourceDirectory>src/main/web</warSourceDirectory>
                 </configuration>
             </plugin>
         </plugins>

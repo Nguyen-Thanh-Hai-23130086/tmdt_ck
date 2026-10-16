@@ -10,8 +10,7 @@ public class LoginService {
 
     //====== ĐĂNG NHẬP ======
     public User login(String email, String password) throws SQLException {
-        if (email == null || email.isBlank()
-                || password == null || password.isBlank()) {
+        if (email == null || email.isBlank() || password == null || password.isBlank()) {
             return null;
         }
 
