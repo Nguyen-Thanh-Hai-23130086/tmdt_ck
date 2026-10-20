@@ -1,18 +1,14 @@
-
 package dao;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+import org.jdbi.v3.core.Jdbi;
 
 public abstract class BaseDao {
+    private Jdbi jdbi;
 
-    protected Connection getConnection() throws SQLException {
-        try {
-            return DBConnection.getConnection();
-        } catch (SQLException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new SQLException("Không thể kết nối MySQL", e);
+    public Jdbi get() {
+        if (jdbi == null) {
+            jdbi = Jdbi.create(DBConnection.getDataSource());
         }
+        return jdbi;
     }
 }

@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập | TalentMatch</title>
-    <link rel="stylesheet" href="../css/login_register.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/login_register.css">
 </head>
 <body>
 <header class="topbar">
@@ -47,7 +49,11 @@
             <button type="button" class="selected"><span>♟</span> Ứng viên</button>
             <button type="button"><span>▤</span> Nhà tuyển dụng</button>
         </div>
-
+<% if (request.getAttribute("err") != null) { %>
+    <p class="error-message">
+        <%= request.getAttribute("err") %>
+    </p>
+<% } %>
         <form action="/talentmatch/login" method="post">
             <label for="email">Email hoặc số điện thoại <b>*</b></label>
             <div class="input-box"><span>✉</span><input id="email" name="email" type="text"
@@ -101,6 +107,20 @@
         <div><a href="#">f</a><a href="#">in</a><a href="#">▶</a><a href="#">◎</a><a href="#">◎</a></div>
     </div>
 </footer>
+<%
+    String loginMessage = (String) request.getAttribute("loginMessage");
+    if (loginMessage != null) {
+%>
+<script>
+    alert("<%= loginMessage
+        .replace("\\", "\\\\")
+        .replace("\"", "\\\"")
+        .replace("\r", "")
+        .replace("\n", "\\n") %>");
+</script>
+<%
+    }
+%>
 </body>
-<script src="../js/login_register.js"></script>
-</html>
+<script src="${pageContext.request.contextPath}/js/login_register.js"></script>
+mvn clean package</html>

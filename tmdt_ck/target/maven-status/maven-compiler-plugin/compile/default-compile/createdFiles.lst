@@ -1,3 +1,4 @@
+service\HashService.class
 dao\DBConnection.class
 controller\LoginController.class
 dao\UserDao.class

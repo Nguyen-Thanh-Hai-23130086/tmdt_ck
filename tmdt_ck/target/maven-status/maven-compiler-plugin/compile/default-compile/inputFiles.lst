@@ -4,4 +4,5 @@ D:\github2\tmdt_ck\tmdt_ck\src\java\dao\BaseDao.java
 D:\github2\tmdt_ck\tmdt_ck\src\java\dao\DBConnection.java
 D:\github2\tmdt_ck\tmdt_ck\src\java\dao\UserDao.java
 D:\github2\tmdt_ck\tmdt_ck\src\java\model\User.java
+D:\github2\tmdt_ck\tmdt_ck\src\java\service\HashService.java
 D:\github2\tmdt_ck\tmdt_ck\src\java\service\LoginService.java
