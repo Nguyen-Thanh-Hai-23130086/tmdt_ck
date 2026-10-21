@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentMatch | Trang chủ</title>
+    <link rel="stylesheet" href="../css/talentmatch.css">
+</head>
+<body>
+<header class="topbar">
+    <a href="home.html" class="brand" aria-label="TalentMatch">
+        <span class="brand-symbol"><i></i><i></i><i></i><i></i></span>
+        <span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span>
+    </a>
+    <nav>
+        <a href="home.html">Trang chủ</a>
+        <a href="jobs.html">Tìm việc làm</a>
+        <a href="candidates.html">Tìm ứng viên</a>
+        <a href="#">Doanh nghiệp</a>
+        <a href="#">Về chúng tôi</a>
+    </nav>
+    <div class="top-actions avatar-area">
+        <button class="search" type="button" aria-label="Tìm kiếm">⌕</button>
+        <button class="avatar-button" type="button" id="avatarButton">A</button>
+        <div class="avatar-menu" id="avatarMenu">
+            <strong>Nguyễn Văn A</strong>
+            <span>Ứng viên</span>
+            <a href="profile.html">Thông tin tài khoản</a>
+            <a href="jobs.html">Việc làm đã lưu</a>
+            <a href="../html/login.html">Đăng xuất</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-copy">
+            <div class="eyebrow"><span>ϟ</span> Nền tảng kết nối việc làm hàng đầu Việt Nam</div>
+            <h1>Mở lối cơ hội.<br><span>Kết nối tương lai.</span></h1>
+            <p>TalentMatch giúp ứng viên tìm việc theo kỹ năng, xem chi tiết công ty và ứng tuyển. Doanh nghiệp có thể tìm ứng viên phù hợp, xem hồ sơ và gửi lời mời ứng tuyển.</p>
+            <div class="hero-actions">
+                <a class="primary-button" href="jobs.html">Tìm việc làm</a>
+                <a class="outline-button inline" href="candidates.html">Tìm ứng viên</a>
+            </div>
+        </div>
+        <section class="summary-card">
+            <h2>Tài khoản của bạn</h2>
+            <div class="profile-summary">
+                <span class="avatar large">A</span>
+                <div>
+                    <strong>Nguyễn Văn A</strong>
+                    <p>Frontend Developer • React, JavaScript, HTML/CSS</p>
+                </div>
+            </div>
+            <a class="primary-link" href="profile.html">Xem và cập nhật thông tin cá nhân</a>
+        </section>
+    </section>
+
+    <section class="content-section">
+        <div class="section-heading">
+            <div>
+                <h2>Việc làm phù hợp</h2>
+                <p>Các công ty đang tuyển vị trí khớp kỹ năng của bạn.</p>
+            </div>
+            <a class="text-link" href="jobs.html">Xem tất cả</a>
+        </div>
+        <div class="listing-grid" id="homeJobs"></div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-heading">
+            <div>
+                <h2>Ứng viên nổi bật</h2>
+                <p>Dành cho doanh nghiệp đang cần tuyển người làm.</p>
+            </div>
+            <a class="text-link" href="candidates.html">Xem tất cả</a>
+        </div>
+        <div class="listing-grid" id="homeCandidates"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <a href="home.html" class="brand brand-footer">
+                <span class="brand-symbol"><i></i><i></i><i></i><i></i></span>
+                <span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span>
+            </a>
+            <div class="footer-social"><a href="#">f</a><a href="#">in</a><a href="#">▶</a><a href="#">◎</a></div>
+        </div>
+        <div class="footer-col"><h3>Dành cho người tìm việc</h3><a href="jobs.html">Tìm việc làm</a><a href="profile.html">Tạo hồ sơ</a><a href="#">Hướng dẫn</a></div>
+        <div class="footer-col"><h3>Dành cho nhà tuyển dụng</h3><a href="#">Đăng tin tuyển dụng</a><a href="candidates.html">Tìm ứng viên</a><a href="#">Bảng giá</a></div>
+        <div class="footer-col"><h3>Về TalentMatch</h3><a href="#">Giới thiệu</a><a href="#">Chính sách bảo mật</a><a href="#">Điều khoản sử dụng</a></div>
+        <div class="footer-col"><h3>Hỗ trợ</h3><a href="#">Trung tâm trợ giúp</a><a href="#">Câu hỏi thường gặp</a><a href="#">Liên hệ</a></div>
+        <div class="newsletter"><h3>Đăng ký nhận tin</h3><form action="#"><input type="email" placeholder="Nhập email của bạn"><button type="submit">→</button></form><small>Nhận tin việc làm và các cơ hội mới nhất</small></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 TalentMatch. Tất cả quyền được bảo lưu.</span></div>
+</footer>
+
+<script src="../js/talentmatch.js"></script>
+</body>
+</html>

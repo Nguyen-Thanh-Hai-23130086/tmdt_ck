@@ -1,0 +1,44 @@
+.register-card {
+    max-width: 480px;
+}
+
+.register-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-card .input-box select {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font: inherit;
+}
+
+.register-card .terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 14px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.register-card .terms input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.register-card .register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .register-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}

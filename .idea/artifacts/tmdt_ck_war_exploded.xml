@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="tmdt_ck:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/tmdt_ck_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="tmdt_ck/web/Web" />
+      <element id="javaee-facet-resources" facet="tmdt_ck/web/Web2" />
+    </root>
+  </artifact>
+</component>
