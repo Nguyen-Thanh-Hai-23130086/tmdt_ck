@@ -18,7 +18,7 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        request.getRequestDispatcher("/html/login_register.jsp")
+        request.getRequestDispatcher("/html/login.jsp")
                 .forward(request, response);
     }
 
@@ -40,7 +40,7 @@ public class LoginController extends HttpServlet {
             //check status
             if (!user.isStatus()) {
                 request.setAttribute("err", "Tài khoản của bạn bị khóa");
-                request.getRequestDispatcher("/html/login_register.jsp").forward(request, response);
+                request.getRequestDispatcher("/html/login.jsp").forward(request, response);
             }
             String role = user.getRole();
             String roleName;
@@ -53,7 +53,7 @@ public class LoginController extends HttpServlet {
                 roleName = "Ứng viên";
             } else {
                 request.setAttribute("err", "Vai trò tài khoản không hợp lệ");
-                request.getRequestDispatcher("/html/login_register.jsp")
+                request.getRequestDispatcher("/html/login.jsp")
                         .forward(request, response);
                 return;
             }
@@ -64,7 +64,7 @@ public class LoginController extends HttpServlet {
                             + "Email: " + user.getEmail() + "\n"
                             + "Vai trò: " + roleName);
 
-            request.getRequestDispatcher("/html/login_register.jsp")
+            request.getRequestDispatcher("/html/login.jsp")
                     .forward(request, response);
             return;
 //            // Check role
@@ -78,7 +78,7 @@ public class LoginController extends HttpServlet {
 //                response.sendRedirect("freelancer");
 //            } else {
 //                request.setAttribute("err", "Vai trò tài khoản không hợp lệ");
-//                request.getRequestDispatcher("/html/login_register.jsp")
+//                request.getRequestDispatcher("/html/login.jsp")
 //                        .forward(request, response);
 //            }
         }
