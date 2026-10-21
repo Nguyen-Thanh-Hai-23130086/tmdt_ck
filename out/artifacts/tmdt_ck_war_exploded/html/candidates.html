@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentMatch | Tìm ứng viên</title>
+    <link rel="stylesheet" href="../css/talentmatch.css">
+</head>
+<body>
+<header class="topbar">
+    <a href="home.html" class="brand"><span class="brand-symbol"><i></i><i></i><i></i><i></i></span><span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span></a>
+    <nav><a href="home.html">Trang chủ</a><a href="jobs.html">Tìm việc làm</a><a href="candidates.html">Tìm ứng viên</a><a href="#">Doanh nghiệp</a><a href="#">Về chúng tôi</a></nav>
+    <div class="top-actions avatar-area"><button class="search" type="button">⌕</button><button class="avatar-button" type="button" id="avatarButton">A</button><div class="avatar-menu" id="avatarMenu"><strong>Công ty NovaTech</strong><span>Nhà tuyển dụng</span><a href="profile.html">Thông tin tài khoản</a><a href="../html/login.html">Đăng xuất</a></div></div>
+</header>
+<main>
+    <section class="list-page-head">
+        <div><div class="eyebrow"><span>ϟ</span> Ứng viên đang tìm việc</div><h1>Tìm ứng viên phù hợp vị trí tuyển dụng.</h1><p>Doanh nghiệp lọc ứng viên theo kỹ năng, kinh nghiệm và mức lương mong muốn, sau đó xem hồ sơ chi tiết.</p></div>
+    </section>
+    <section class="commerce-shell">
+        <aside class="filter-card">
+            <h2>Lọc ứng viên</h2>
+            <label for="candidateKeyword">Từ khóa</label><input id="candidateKeyword" type="search" placeholder="Tên hoặc vị trí">
+            <label for="candidateSkill">Kỹ năng</label><select id="candidateSkill"><option value="all">Tất cả kỹ năng</option><option>React</option><option>Node.js</option><option>Figma</option><option>SQL</option><option>Power BI</option></select>
+            <label for="candidateExp">Kinh nghiệm</label><select id="candidateExp"><option value="all">Tất cả kinh nghiệm</option><option value="junior">0-1 năm</option><option value="middle">2-3 năm</option><option value="senior">Từ 4 năm</option></select>
+            <label for="candidateSort">Sắp xếp</label><select id="candidateSort"><option value="default">Phù hợp nhất</option><option value="expDesc">Kinh nghiệm cao nhất</option><option value="salaryAsc">Lương mong muốn tăng dần</option><option value="salaryDesc">Lương mong muốn giảm dần</option></select>
+        </aside>
+        <section class="list-section"><div class="section-heading"><div><h2>Danh sách ứng viên</h2><p id="candidateCount">0 ứng viên phù hợp</p></div></div><div class="listing-grid two" id="candidatesGrid"></div></section>
+    </section>
+</main>
+<script src="../js/talentmatch.js"></script>
+</body>
+</html>

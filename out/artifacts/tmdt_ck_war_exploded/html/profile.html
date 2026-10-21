@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentMatch | Thông tin tài khoản</title>
+    <link rel="stylesheet" href="../css/talentmatch.css">
+</head>
+<body>
+<header class="topbar">
+    <a href="home.html" class="brand"><span class="brand-symbol"><i></i><i></i><i></i><i></i></span><span><strong>Talent<span>Match</span></strong><small>KẾT NỐI TÀI NĂNG - KIẾN TẠO TƯƠNG LAI</small></span></a>
+    <nav><a href="home.html">Trang chủ</a><a href="jobs.html">Tìm việc làm</a><a href="candidates.html">Tìm ứng viên</a><a href="#">Doanh nghiệp</a><a href="#">Về chúng tôi</a></nav>
+    <div class="top-actions avatar-area"><button class="search" type="button">⌕</button><button class="avatar-button" type="button" id="avatarButton">A</button><div class="avatar-menu" id="avatarMenu"><strong>Nguyễn Văn A</strong><span>Ứng viên</span><a href="profile.html">Thông tin tài khoản</a><a href="../html/login.html">Đăng xuất</a></div></div>
+</header>
+<main>
+    <section class="profile-page">
+        <aside class="profile-side"><span class="avatar huge">A</span><h2>Nguyễn Văn A</h2><p>Frontend Developer</p><a class="primary-link" href="jobs.html">Xem việc phù hợp</a></aside>
+        <form class="profile-form" id="profileForm">
+            <h1>Thông tin cá nhân</h1>
+            <div class="form-two"><div><label for="fullName">Họ tên</label><input id="fullName" value="Nguyễn Văn A"></div><div><label for="phone">Số điện thoại</label><input id="phone" value="0901234567"></div></div>
+            <label for="email">Email</label><input id="email" value="ungvien@talentmatch.local">
+            <label for="headline">Vị trí mong muốn</label><input id="headline" value="Frontend Developer">
+            <label for="skills">Kỹ năng</label><input id="skills" value="React, JavaScript, HTML/CSS, Git">
+            <label for="bio">Giới thiệu</label><textarea id="bio" rows="5">Tôi có kinh nghiệm xây dựng giao diện web, tối ưu responsive và làm việc với API.</textarea>
+            <button class="primary-button" type="submit">Cập nhật thông tin</button>
+            <p class="form-message" id="profileMessage"></p>
+        </form>
+    </section>
+</main>
+<script src="../js/talentmatch.js"></script>
+</body>
+</html>
