@@ -1,8 +1,13 @@
+service\EmailService$1.class
+service\EmailService.class
+controller\VerifyEmailController.class
+dao\UserDao.class
+controller\RegisterController.class
+TestLogin.class
+service\RegisterService.class
 service\HashService.class
 dao\DBConnection.class
 controller\LoginController.class
-dao\UserDao.class
 service\LoginService.class
-TestLogin.class
 dao\BaseDao.class
 model\User.class

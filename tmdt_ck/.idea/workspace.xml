@@ -5,25 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d09d1ee-b206-4474-ab47-8bf62171e276" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/java/controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/controller/VerifyEmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/service/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web/css/verify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web/html/verify.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web/js/verify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/dao/BaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/dao/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/dao/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/html/login_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/html/login_register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/js/login_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/js/login_register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/css/login_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/html/login_register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/html/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/js/login_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/talentmatch.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/dao/BaseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/dao/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/dao/DBConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/WEB-INF/classes/service/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/talentmatch/html/login_register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/talentmatch/js/login_register.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/talentmatch/js/login_register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/talentmatch/css/login_register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/talentmatch/html/login_register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/talentmatch/js/login_register.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -40,23 +50,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3Kxb0i4WITEZSyMh68GlXAPoVQW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "com.intellij.ide.FileNotInSourceRootChecker.no.check": "true",
+    "git-widget-placeholder": "loginEmail",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.jshint": "true",
     "node.js.selected.package.jshint": "",
     "nodejs_package_manager_path": "npm"
